@@ -1,4 +1,4 @@
-package com.pbd1.proybd.app.config;
+package com.pbd1.proybd.app;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
