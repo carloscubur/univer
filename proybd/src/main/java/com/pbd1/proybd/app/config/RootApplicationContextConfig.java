@@ -18,7 +18,11 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 
 @Configuration
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
+@PropertySource("classpath:application.properties")
+@ComponentScan(basePackages = "com.pbd1.proybd")
+@Import({WebSecurityConfig.class})
+
 public class RootApplicationContextConfig {
 
     /*private static final Logger LOG = LoggerFactory.getLogger(RootApplicationContextConfig.class);

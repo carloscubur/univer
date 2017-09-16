@@ -10,10 +10,13 @@ import javax.servlet.Filter;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
+import com.pbd1.proybd.app.config.*;
+
 /**
  * Created by carloscubur on 11/09/17.
  */
-public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
+public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         super.onStartup(servletContext);
@@ -21,7 +24,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] {RootApplicationContextConfig.class};
+        return new Class<?>[] {RootApplicationContextConfig.class, WebSecurityConfig.class, DataSourceConfig.class, JpaConfig.class};
     }
 
     @Override
