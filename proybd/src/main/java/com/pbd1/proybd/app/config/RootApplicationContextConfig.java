@@ -1,16 +1,9 @@
 package com.pbd1.proybd.app.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import javax.annotation.PostConstruct;
-
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @author Carlos Cubur
@@ -18,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 
 @Configuration
-//@EnableAutoConfiguration
 @PropertySource("classpath:application.properties")
 @ComponentScan(basePackages = "com.pbd1.proybd")
 @Import({WebSecurityConfig.class})
